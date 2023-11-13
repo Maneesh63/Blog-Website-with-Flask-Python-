@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBSITE USERS LIST</title>
+<style>
+    table, th, td {
+        border:1px solid rgb(255, 255, 255);
+        border-collapse: collapse;
+        color: white;
+        background-color: rgb(0, 0, 0);
+    }
+</style>
+</head>
+<body>
+    
+<table>
+    <tr>
+        <th>USER ID</th>
+        <th>EMAIL</th>
+        <th>PASSWORD</th>
+        <th>DATE JOINED</th>
+        <th>DELETE</th>
+    </tr>
+
+    {% for datas in data %}
+    <tr>
+         
+       <td> {{datas.user_id}}</td>
+       <td>{{datas.email}}</td>
+       <td>{{datas.password}}</td>
+       <td>{{datas.date_added}}</td>
+      <td><li class="delete" ><a href="{{url_for('delete_user',user_id=datas.user_id)}}">DELETE</a></li></td>
+    </tr>
+    
+    {% endfor %}
+</table>
+
+</body>
+</html>

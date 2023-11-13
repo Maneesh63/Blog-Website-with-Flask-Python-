@@ -1,0 +1,36 @@
+{% extends 'common.html' %}
+
+   {% block title %}  dashboard {% endblock %}
+
+   {% block styles %}
+    <link rel="stylesheet" href="{{url_for('static',filename='dashboard.css')}}">
+   {% endblock %}
+
+
+{% block content %}
+
+    <div class="doc">
+
+ <h1>USERNAME:{{current_user.username}}</h1>
+ <h2>EMAIL:{{ current_user.email}}</h2>
+      
+
+    </div>
+
+
+ {% if current_user.user_id == dash.user_id %}
+
+ <DIV class="piece">
+
+ <li class="about"><a href="{{url_for('description')}}">ABOUT</a></li>
+
+ <li class="edit"><a href="{{url_for('edit_dash',user_id=current_user.user_id)}}">EDIT PROFILE</a></li>
+
+ 
+ <li class="logout"><a href="{{url_for('logout')}}">LOGOUT</a></li>
+
+ </DIV>
+
+ {% endif %}
+    
+{% endblock %}

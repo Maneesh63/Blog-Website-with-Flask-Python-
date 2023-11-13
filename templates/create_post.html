@@ -1,0 +1,84 @@
+{% extends 'common.html' %}
+
+     {% block title %}Create Post {% endblock %}
+
+
+ {% block styles %}
+
+     <link rel="stylesheet" href="{{url_for('static', filename='create.css' )}}">
+ 
+     {% endblock %}
+ 
+ {% block content %}
+
+  <!-----
+
+<div class="fl">
+        {% with messages = get_flashed_messages(category_filter=["success"]) %}  
+          {% if messages %}
+            <div class="alert">
+              <a class="close" href="{{url_for('create_post')}}">X</a>
+              <ul>
+                {% for message in messages %} 
+                  <li class="he">{{ message }}</li>
+                {% endfor %}  
+              </ul>
+            </div> 
+          {% endif %}
+        {% endwith %}  
+      </div>
+      --->
+ 
+ <h1>Create Post</h1>
+ 
+ <form method="post" action="{{url_for('create_post')}}"> 
+     <label for="title">Title:</label><br>
+     <input type="text" id="title" name="title" required><br><br>
+ 
+     <label for="content">Content:</label><br>
+     <textarea id="content" name="content" rows="15" cols="60" required></textarea><br><br>
+ 
+     <input type="submit" value="Create Post" onclick="validate(event)">
+     
+
+ </form>
+
+ <div class="dialog" id="suc-dialog">
+  <p>post created successsfully</p>
+  <button class="close" id="close" onclick="closedialog()">close</button>
+ </div>
+
+  
+ 
+ <script>
+function validate() {
+  
+     let title = document.getElementById('title').value;
+     let content = document.getElementById('content').value;
+ 
+     if (title === '') {
+         alert('Title is Required');
+         return false;
+     }
+ 
+     if (content === '') {
+         alert('Content is required');
+         return false;
+     }
+ 
+     document.getElementById('suc-dialog').style.display='block';
+
+     setTimeout(function () {
+      document.getElementById('suc-dialog').style.display = 'none';
+      window.location.href = '{{ url_for("home2") }}';   }, 5000);  
+
+  }
+function closedialog()
+     {
+      document.getElementById('suc-dialog').style.display='none';
+     }
+ 
+ </script>
+ 
+{% endblock %}
+ 

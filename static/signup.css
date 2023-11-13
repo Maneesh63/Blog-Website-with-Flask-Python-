@@ -1,0 +1,101 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  body {
+     
+      background-position: center;
+      background-size: cover;
+     }
+      .log {
+          margin-top: 5px;
+          outline: 2px solid rgb(0, 0, 0);
+          margin-left: 600px;
+          border-radius: 100px;
+          height: 150px;
+          width: 150px;
+          transition: width 0.2s linear;
+      }
+      form {
+          color: rgb(0, 0, 0);
+          width: 300px;
+          height: 500px;
+          margin:10px 0 0 500px;  
+          padding: 7px 0 0 0;
+      }
+      input[type='submit'] {
+          margin-left: 15px;
+          background-color: rgb(0, 0, 0);
+          color: rgb(255, 250, 250);
+          padding: 10px ;
+          width: 350px;
+         
+      }
+      input[type='password'],
+      input[type='email'],
+      input[type='text'] {
+
+          color: black;
+          border: 1px solid black;
+          box-sizing: border-box;
+          margin:13px 0 0 15px;
+          padding: 8px;
+          width: 350px;
+      }
+      input[type='password']:focus,
+      input[type='email']:focus,
+      input[type='text']:focus{
+       border-color: rgb(14, 215, 31);
+        outline: none;}
+        
+        input[type='password']:invalid,
+        input[type='email']:invalid,
+        input[type='text']:invalid{
+         border-color: rgb(255, 0, 0);
+           }
+  
+    
+      .top h2 {
+          margin-left: 640px;  
+      }
+      #signin{
+          margin-left: 50px;
+          font-size: 15px;
+      }
+      #signin a{
+        margin: 0 0 0 2px;
+        color: rgb(0, 0, 0);
+      }
+  
+      #signin a:hover{
+        transition: .4s;
+        color: rgb(12, 253, 12);
+      }
+  
+      .alert{
+          background-color: rgb(239, 64, 16);
+          display: flex;
+          border: 1px solid rgb(0, 0, 0);
+          padding:10px;
+          font-weight: bold;
+           
+          
+        }
+        
+      
+     .close{
+          margin:0 0 0 35rem;
+        }
+
+        .alert1{
+          background-color: rgb(27, 211, 67);
+          display: flex;
+          border: 1px solid rgb(0, 0, 0);
+          padding:10px;
+          font-weight: bold;
+        } 

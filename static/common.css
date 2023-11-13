@@ -1,0 +1,169 @@
+* {
+  list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    
+  }
+
+body{
+ 
+  background-position: center;
+  background-size: cover;
+}
+  
+  header {
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+  }
+  
+  nav ul {
+   
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin-right: 30px;
+    padding: 10px;
+  }
+
+  nav ul li a{
+    color: rgb(253, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+     }
+
+    .home a:hover{
+      color: blue;
+      transition: .4s;
+    }
+    .topp a:hover{
+      color: blue;
+      transition: .4s;
+    }
+    .latest a:hover{
+      color: blue;
+      transition: .4s;
+    }
+
+    .me a:hover{
+      color: blue;
+      transition: .4s;
+    }
+
+    .join a:hover{
+      color: blue;
+      transition: .4s;
+      }
+
+    .login a:hover{
+       color: blue;
+        transition: .4s;}
+  
+  .log1 {
+    margin-right: 10px;
+    margin-left:4rem;
+    border-radius: 5px;
+    height: 50px;
+    width: 60px;
+  }
+   
+   
+  .join{
+     
+    margin-left:30rem;
+     
+  }
+
+   
+
+  .dash a:hover{
+    color: blue;
+  }
+  
+  .create{
+    margin-left: 1rem;
+    outline: 2px solid transparent;
+    padding: 8px 15px;
+    border-radius: 30px;
+    background-color:rgb(255, 255, 255);
+  }
+  .create a{
+    color: black;
+  }
+  
+  .create:hover{
+    transform: scale(1.2);
+  }
+
+  .creat{
+      margin-left: 35rem;
+      outline: 2px solid transparent;
+      padding: 8px 15px;
+      border-radius: 30px;
+      background-color:rgb(255, 255, 255);
+    }
+    .creat a{
+      color: black;
+    }
+    .creat:hover{
+      transform: scale(1.2);
+    }
+   
+   
+  footer{
+    margin-top: 30%;
+    margin-bottom: 0;
+    text-align: center;
+    color: aliceblue;
+    padding: 20px;
+    background-color: black;
+  }
+  .cont1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 50px;
+    text-align: center;
+  }
+  .cont1 p{
+    margin-top: 10px;
+  }
+
+
+  .link{
+
+     list-style: none;
+    margin:10px 10px 18px 0;
+    height: 40px;
+    width: 38px;
+  }
+   
+.insta{
+  margin-left: 20px;
+  height: 40px;
+  width: 40px;
+}
+  
+  input[type='text']{
+    color: aliceblue;
+     outline: 5px solid whitesmoke;
+  }
+  ul.social-links li {
+    display: inline-block;
+    margin-right: 10px;
+  } 
+
+ ul.social-links li a {
+    display: inline-block;
+    vertical-align: middle;
+}
+.git{
+  margin-left: 20px;
+  height: 45px;
+  width: 45px;
+}
+ 
+
+ 

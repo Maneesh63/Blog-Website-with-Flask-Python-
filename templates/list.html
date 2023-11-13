@@ -1,0 +1,25 @@
+{% extends 'common.html' %}
+
+{% block title %}List{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{url_for('static', filename='list.css')}}">
+{% endblock %}
+
+{% block content %}
+    {% for li in list %}
+        <div class="cont">
+            <div class="own">
+              <a href="{% if li.user_id %}{{ url_for('dashboard', user_id=li.user_id) }}{% else %}{{url_for('login')}}{% endif %}">
+                <h5>{{ li.user.username }}</h5>
+            </a>
+            
+                
+            </div>
+            <a href="{{url_for('individual', post_id=li.post_id)}}">
+                <h3>{{ li.title }}</h3>
+                <h5>{{ li.date }}</h5>
+            </a>
+        </div>
+    {% endfor %}
+{% endblock %}

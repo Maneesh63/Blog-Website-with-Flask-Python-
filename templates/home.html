@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Blog</title>
+  <link  rel="stylesheet" href="{{url_for('static', filename='home.css') }}"> 
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <a href="{{url_for('home')}}"> 
+        <img src="/static/images/Be logo.png" class="log1" alt="Logo">
+        </a>
+        <li class="home"><a href="{{url_for('home')}}">Home</a></li>
+
+        <li class="top"><a href="{{url_for('list')}}">Top Stories</a></li>
+
+       <li class="latest"><a href="{{url_for('list')}}">Latest Stories</a></li>
+
+       {% if current_user.user_id == 1 %}
+       <li class="admin"><a href="{{url_for('admin')}}">Admin</a></li>
+       {% endif %}
+
+
+       {% if current_user.is_authenticated %} 
+               
+                <li class="creat"><a href="{{url_for('create_post')}}">Create Post</a></li>
+
+                <li class="dash"><a href="{{url_for('dashboard', user_id=current_user.user_id)}}">Dashboard</a></li>
+
+                 
+            
+       {% else %}
+
+                <li class="join"><a href="{{url_for('signup')}}">Join</a></li>
+
+                <li class="login"><a href="{{url_for('login')}}">Sign In</a></li>
+
+                <li class="create"><a href="{% if current_user.user_id %}{{url_for('create_post')}}{% else %}{{url_for('login')}}{% endif %}">Create story</a></li>
+
+       {% endif %}
+          
+      </ul>
+    </nav>
+  </header>
+  
+  <section class="cont1">
+    <h1>Welcome to BE Blog</h1>
+    <p>Sharing insights, ideas, and stories</p>
+  </section>
+  
+
+  <!---- <ul>     
+    {% for post in posts %}
+
+    <h2>{{ post.title }}:<br></h2></a>
+    <p>{{ post.content }}<br></p>
+    <p> By:{{post.user.username}}</p>
+    Date:{{ post.date_posted }}<br>
+
+    {% endfor %}
+  </ul>
+-->
+
+ 
+  <footer>
+    <ul class="social-links">
+        <li>
+            <a href="https://www.linkedin.com/in/maneesh63/">
+                <img src="/static/images/linkedin.png" class="link" alt="LinkedIn">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/m.r.mass001/">
+                <img src="/static/images/instagram.png" class="insta" alt="Instagram">
+            </a>
+        </li>
+        <li> <a href="https://github.com/Maneesh63">
+          <img src="/static/images/git1.jpg" class="git" alt="github">
+        </a></li>
+        </ul>
+       
+    <p>&copy; 2023 BE Blog. Some rights reserved.</p>
+</footer>
+     
+  
+</body>
+</html>

@@ -1,0 +1,30 @@
+{% extends 'common.html' %}
+     
+{% block title %} EDIT POST {% endblock %}
+
+ 
+{% block styles %}
+
+<link rel="stylesheet" href="{{url_for('static', filename='edit.css' )}}">
+
+   {% endblock %}
+ 
+{% block content %}
+
+<h2>Edit Post </h2>
+
+ 
+ <div class="f">                                        
+    <form method="post" action="{{ url_for('edit_post', post_id=find.post_id) }}">
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" value="{{ find.title }}"required><br><br>
+
+        
+        <label for="content">Content:</label><br>
+        <textarea id="content" name="content" rows="15" cols="100"  required>{{ find.content }}</textarea><br><br>
+     
+       <input type="submit" value="update Post">
+    </form>
+
+ </div>
+ {% endblock %}
